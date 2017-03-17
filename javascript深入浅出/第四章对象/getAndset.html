@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script>
+		// 对象的读和写
+
+		/*
+		var person = {
+			"name": "yzd",
+			"sex": "man",
+			get age(){
+				return new Date().getFullYear() - 1990;
+			},
+			set age(num){
+				console.log( 'Age can\'t be set to ' + num );
+			}
+		}
+		console.log( person.age );
+		person.age = 100;
+		console.log( person.age );
+		*/
+
+		/*
+		var person = {
+			"name": "yzd",
+			"sex": "man",
+			"$age": 55,
+			get age(){
+				if( this.$age == undefined ){
+					return new Date().getFullYear() - 1990;
+				}else{
+					return this.$age;
+				}
+			},
+			set age(num){
+				num = +num;
+				if( !isNaN(num) && num > 0 && num < 150 ){
+					this.$age = num;
+				}else{
+					throw new Error( 'Incorrect num = ' + num );
+				}
+			}
+		}
+		console.log( person.age );
+		person.age = 100;
+		console.log( person.age );
+		person.age = 'aaa';
+		*/
+
+		var o = {};
+		Object.defineProperty(o,'x',{
+			"value": 1
+			// 默认writable = false
+			// configurable = false
+		})
+
+		var obj = Object.create(o);
+		console.log( obj.x );
+		obj.x = 100;
+		console.log( obj.x );
+		Object.defineProperty(obj,'x',{
+			"value": 100,
+			"writable": true,
+			"configurable": true
+		})
+		console.log( obj.x );
+
+	</script>
+
+</body>
+</html>

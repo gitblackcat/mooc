@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script>
+		
+	console.log( Object.prototype.toString.apply([]) ); //[object Array]
+	console.log( Object.prototype.toString.apply(function(){}) ); //[object Function]
+	console.log( Object.prototype.toString.apply(null) ); //[object Null]
+	console.log( Object.prototype.toString.apply(undefined) ); //[object Undefined]
+	// 注意 IE6/7/8 console.log( Object.prototype.toString.apply(null) );//[object Object]
+	// 注意 IE6/7/8 console.log( Object.prototype.toString.apply(undefined) );//[object Object]
+
+	/*
+		小结：适合内置对象和基本类型 遇到null和undefined在IE6/7/8下失效
+	*/
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	<script>
+		// try语句后边必须接catch语句或者finally语句或者两者都有
+		/*try{
+			throw 'error';//抛出错误'error'
+		}catch(ex){
+			console.log( ex ); //显示出来
+		}finally{
+			console.log( 'finally' ); //不管前面怎么样 finally中的东西一定会执行
+		}*/
+
+		/*try{
+			try{
+				throw new Error('oops'); //当抛出的错误本层没有catch的时候
+										// 会在最近的外层catch中显示
+			}finally{
+				console.log( 'finally' );
+			}
+		}catch(ex){
+			console.error( 'outer',ex.message );
+		}*/
+
+		/*try{
+			try{
+				throw new Error('oops');
+			}catch(ex){
+				console.error( 'inner',ex.message );
+				// 因为在内层已显示错误 所以外层的catch失效
+			}finally{
+				console.log( 'finally' );
+			}
+		}catch(ex){
+			console.error( 'outer',ex.message );
+		}*/
+
+		try{
+			try{
+				throw new Error('oops');
+			}catch(ex){
+				console.error( 'inner',ex.message );
+				throw ex;
+				// 这里catch还可以抛出错误 然后由最近的外层catch显示错误
+			}finally{
+				console.log( 'finally' );  
+			}
+		}catch(ex){
+			console.error( 'outer',ex.message );
+		}
+
+	</script>
+
+</body>
+</html>

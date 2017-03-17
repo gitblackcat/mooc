@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script>
+		console.log( typeof 100 ); //number
+		console.log( typeof true ); //boolean
+		console.log( typeof function(){} ); //function
+		console.log( typeof undefined ); //undefined
+		console.log( typeof new Object() ); //object
+		console.log( typeof [1,2] ); //object
+		console.log( typeof NaN ); //number
+		console.log( typeof null ); //object
+
+		// 注意点一：typeof判断类型以后，返回值是字符串类型
+		// console.log( typeof (typeof 100) ); string
+
+		// 注意点二：typeof 可以用另一种写法
+		// console.log( typeof(100) );
+
+		// 注意点三：null是object类型 这是历史遗留原因
+
+		/*
+			小结：适合基本类型以及function检测，遇到null失效
+			解决方式：需要严格的等号判断：
+			var a = null;
+			console.log( a === null );
+		*/
+		
+	</script>
+
+</body>
+</html>

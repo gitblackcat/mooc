@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script>
+		var num = 20;
+		// 转化成字符串类型
+		num = num + '';
+		console.log( typeof num );
+
+		var str = '100';
+		// 转化成数字类型
+		str = str - 0;
+		console.log( typeof str );
+
+		// 以上都是隐式转换
+
+		var aaa = '10';
+		var bbb = 10;
+		console.log( aaa*bbb );//100
+		console.log( aaa/bbb );//1
+
+		// 只有+是字符串拼接 - * /都是数值运算
+	</script>
+
+</body>
+</html>

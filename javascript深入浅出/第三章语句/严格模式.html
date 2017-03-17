@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script>
+		/*
+			严格模式是一种特殊的运行模式，
+			它修复了部分语言上的不足，
+			提供更强的错误检查，并增强安全性
+		*/
+
+		// 严格模式可以在局部开启，也可以在全局开启
+		/*	在函数内使用严格语句
+			function foo(){
+				'use strict';
+			}
+		*/
+
+		/* 在全局使用严格语句
+			'use strict';
+			function foo(){
+	
+			}
+		*/
+
+		/*严格语句的好处的一个好处在于即使浏览器不能识别严格语句，也能当做一个
+			平常的字符串一样给忽略掉
+		*/
+
+		/*
+		!function(){
+			with( {x: 1} ){
+				console.log( x );
+			}
+		}();
+
+		!function(){
+			'use strict';
+			with( {x: 1} ){
+				console.log( x );
+			}
+		}();
+		严格模式下不能使用with，否则报错
+		*/
+
+		/*
+		!function(){
+			x = 1;
+			console.log( window.x );
+		}();
+
+		!function(){
+			'use strict';
+			x = 1;
+			console.log( window.x );
+		}();
+		在严格模式下，不允许未申明的变量被赋值 否则报错
+		但这里值得注意的一个疑点：上下两个表达式一起被执行 却不报错
+		解答：第一个函数没使用严格模式，实际先定义了一个全局变量x(这里有两个x)
+		*/
+
+		/*
+		!function(a){
+			arguments[0] = 100;
+			console.log( a );
+		}(1);
+		我传了1，修改arguments[0] = 100;则打印出来100
+		如果我不传值，那么我修改arguments[0] = 100;则打印出来undefined
+		
+
+		!function(a){
+			'use strict';
+			arguments[0] = 100;
+			console.log( a );
+		}(1);
+		在严格模式下，arguments变成了参数的静态副本，所以怎么修改arguments[0]，a都是1
+
+		!function(a){
+			'use strict';
+			arguments[0].x = 100;
+			console.log( a );
+		}({ x: 1 });
+		注意：这里出来的是100
+		原因：变量的值为对象类型时，存储的是对象的地址，对象里面随便折腾，只要对象地址不变，由2可知两者存储的地址还是相同的，所以还是相等的
+		*/
+
+		/*
+		!function(a){
+			console.log( delete a );
+		}(1);
+		这里是false
+
+		!function(a){
+			'use strict';
+			console.log( delete a );
+		}(1);
+		这里会报错
+		*/
+
+		/*
+		!function(a){
+			var obj = {};
+			obj.a = a;
+			Object.defineProperty(obj,'a',{
+				configurable: false
+			});
+			console.log( delete obj.a );
+		}(1);
+		打印false
+
+		!function(a){
+			'use strict';
+			var obj = {};
+			obj.a = a;
+			Object.defineProperty(obj,'a',{
+				configurable: false
+			});
+			console.log( delete obj.a );
+		}(1);
+		报错
+		*/
+
+		/*
+			!function(a){
+				var obj = { x: 1,x: 2 };
+				console.log( obj.x );
+			}();
+			打印2
+
+			!function(a){
+				'use strict';
+				var obj = { x: 1,x: 2 };
+				console.log( obj.x );
+			}();
+			报错
+		*/
+
+		/*禁止八进制字面量
+			!function(){
+				var a = 0123;	
+				console.log( a );
+			}();
+			打印83
+
+			!function(){
+				'use strict';
+				var a = 0123;	
+				console.log( a );
+			}();
+			报错
+		*/
+
+		/*在严格模式下，eval、arguments变为关键字，不能作为变量、函数名
+			!function(){
+				function eval(){};
+				console.log( eval );
+			}();
+			打印出function eval(){};
+
+			!function(){
+				'use strict';
+				function eval(){};
+				console.log( eval );
+			}();
+			报错
+		*/
+
+		/*在严格模式下eval会变成独立作用域
+			!function(){
+				eval('var evalVal = 2');
+				console.log( typeof evalVal );
+			}();
+			打印number
+
+			!function(){
+				'use strict';
+				eval('var evalVal = 2');
+				console.log( typeof evalVal );
+			}();
+			打印undefined
+		*/
+
+		/*解释什么是eval()
+			eval函数接收一个参数s，如果s不是字符串，则直接返回s。否则执行s语句。如果s语句执行结果是一个值，则返回此值，否则返回undefined。 
+			需要特别注意的是对象声明语法“{}”并不能返回一个值，需要用括号括起来才会返回值
+			var code1='"a" + 2'; //表达式 
+			varcode2='{a:2}'; //语句 
+			alert(eval(code1)); //->'a2' 
+			alert(eval(code2)); //->undefined 
+			alert(eval('(' + code2 + ')')); //->[object Object] 
+
+			eval("x=10;y=20;document.write(x*y)")
+			//200
+
+			document.write(eval("2+2"))
+			//4
+
+			var x=10
+			document.write(eval(x+17))
+			//27
+
+			eval("alert('Hello world')")
+			弹出hello world
+		*/
+
+	</script>
+
+</body>
+</html>

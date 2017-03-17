@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script>
+		
+		var o = {};
+		o.x = 1;
+		o.y = 2;
+		o.z = 3;
+
+		// 这里for in枚举出来的只是对象自身拥有的属性
+		for(var key in o){
+			console.log( key );
+			console.log( o[key] );
+		}
+
+		// 用Object.create创建的对象会把传进去的值得属性也遍历出来
+		var obj = Object.create(o);
+		obj.a = 'a';
+		for(var attr in obj){
+			console.log( attr );
+			console.log( obj[attr] );
+		}
+
+	</script>
+
+</body>
+</html>

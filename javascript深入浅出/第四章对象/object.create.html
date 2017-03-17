@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script>
+		
+		// 用Object.create的方法创建对象 使得被创建的对象的原型指向被传入的值
+		// 这里obj1.__proto__指向{"x": 1}
+		// {"x": 1}.__proto__指向Object.prototype
+		var obj1 = Object.create({"x": 1});
+		console.log(obj1.__proto__);
+
+		// 这里obj2.__proto__指向null 所以显示undefined
+		var obj2 = Object.create(null);
+		console.log(obj2.__proto__);
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script>
+		var obj = {};
+		obj.y = 2;
+		// 这里的意思是防止obj.x = 1被删除
+		// 注意defineProperty只能支持ie9以上
+		Object.defineProperty(obj,'x',{
+			configurable: false,
+			value: 1
+		})
+
+		console.log( delete obj.x ); //false
+		console.log( obj.x );
+
+		console.log( delete obj.y ); //true
+		console.log( obj.y );
+	</script>
+
+</body>
+</html>

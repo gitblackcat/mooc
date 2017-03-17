@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>旋转木马</title>
+	<link rel="stylesheet" href="main.css">
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+</head>
+<body>
+	<!-- 注意 写在这里的配置参数的对象字符串格式一定要非常严格，否则js那边转不了对象 会报错 -->
+	<div class="J_Poster poster-main" data-setting='{
+			"width": 800,
+			"height": 270,
+			"posterWidth": 640,
+			"posterHeight": 270,
+			"scale": 0.8,
+			"verticalAlign": "top",
+			"autoPlay": true,
+			"delay": 1000
+		}'>
+		<div class="poster-btn poster-prev-btn"></div>
+		<ul class="poster-list">
+			<li class="poster-item">
+				<a href="#"><img src="1.jpg" alt="pic"></a>
+			</li>
+			<li class="poster-item">
+				<a href="#"><img src="2.jpg" alt="pic"></a>
+			</li>
+			<li class="poster-item">
+				<a href="#"><img src="3.jpg" alt="pic"></a>
+			</li>
+			<li class="poster-item">
+				<a href="#"><img src="4.jpg" alt="pic"></a>
+			</li>
+			<li class="poster-item">
+				<a href="#"><img src="5.jpg" alt="pic"></a>
+			</li>
+			<li class="poster-item">
+				<a href="#"><img src="2.jpg" alt="pic"></a>
+			</li>
+			<li class="poster-item">
+				<a href="#"><img src="3.jpg" alt="pic"></a>
+			</li>
+			<li class="poster-item">
+				<a href="#"><img src="4.jpg" alt="pic"></a>
+			</li>
+			<li class="poster-item">
+				<a href="#"><img src="5.jpg" alt="pic"></a>
+			</li>
+		</ul>
+		<div class="poster-btn poster-next-btn"></div>
+	</div>
+
+	<div class="J_Poster poster-main" data-setting='{
+			"width": 800,
+			"height": 270,
+			"posterWidth": 640,
+			"posterHeight": 270,
+			"scale": 0.8,
+			"verticalAlign": "middle",
+			"autoPlay": false,
+			"delay": 1000
+		}'>
+		<div class="poster-btn poster-prev-btn"></div>
+		<ul class="poster-list">
+			<li class="poster-item">
+				<a href="#"><img src="1.jpg" alt="pic"></a>
+			</li>
+			<li class="poster-item">
+				<a href="#"><img src="2.jpg" alt="pic"></a>
+			</li>
+			<li class="poster-item">
+				<a href="#"><img src="3.jpg" alt="pic"></a>
+			</li>
+			<li class="poster-item">
+				<a href="#"><img src="4.jpg" alt="pic"></a>
+			</li>
+			<li class="poster-item">
+				<a href="#"><img src="5.jpg" alt="pic"></a>
+			</li>
+			<li class="poster-item">
+				<a href="#"><img src="2.jpg" alt="pic"></a>
+			</li>
+			<li class="poster-item">
+				<a href="#"><img src="3.jpg" alt="pic"></a>
+			</li>
+			<li class="poster-item">
+				<a href="#"><img src="4.jpg" alt="pic"></a>
+			</li>
+			<li class="poster-item">
+				<a href="#"><img src="5.jpg" alt="pic"></a>
+			</li>
+		</ul>
+		<div class="poster-btn poster-next-btn"></div>
+	</div>
+
+	<div class="J_Poster poster-main" data-setting='{
+			"width": 800,
+			"height": 270,
+			"posterWidth": 640,
+			"posterHeight": 270,
+			"scale": 0.8,
+			"verticalAlign": "bottom",
+			"autoPlay": false,
+			"delay": 1000
+		}'>
+		<div class="poster-btn poster-prev-btn"></div>
+		<ul class="poster-list">
+			<li class="poster-item">
+				<a href="#"><img src="1.jpg" alt="pic"></a>
+			</li>
+			<li class="poster-item">
+				<a href="#"><img src="2.jpg" alt="pic"></a>
+			</li>
+			<li class="poster-item">
+				<a href="#"><img src="3.jpg" alt="pic"></a>
+			</li>
+			<li class="poster-item">
+				<a href="#"><img src="4.jpg" alt="pic"></a>
+			</li>
+			<li class="poster-item">
+				<a href="#"><img src="5.jpg" alt="pic"></a>
+			</li>
+			<li class="poster-item">
+				<a href="#"><img src="2.jpg" alt="pic"></a>
+			</li>
+			<li class="poster-item">
+				<a href="#"><img src="3.jpg" alt="pic"></a>
+			</li>
+			<li class="poster-item">
+				<a href="#"><img src="4.jpg" alt="pic"></a>
+			</li>
+			<li class="poster-item">
+				<a href="#"><img src="5.jpg" alt="pic"></a>
+			</li>
+		</ul>
+		<div class="poster-btn poster-next-btn"></div>
+	</div>
+
+	<script>
+		$(function(){
+			Carousel.init( $('.J_Poster') );
+		});
+	</script>
+</body>
+</html>

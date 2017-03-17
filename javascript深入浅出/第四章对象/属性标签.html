@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script>
+		var obj = {
+			"name": "yzd",
+			"age":25
+		}
+		console.log( Object.getOwnPropertyDescriptor( {name: true},"name" ) );
+		console.log( Object.getOwnPropertyDescriptor( {age: true},"age" ) );
+		// Object {value: true, writable: true, enumerable: true, configurable: true}
+		// writable属性值是否可以修改  enumerable属性是否可以枚举  configurable属性是否可以删除
+
+		var person = {};
+		// 这种方法是重设value标签修改
+		Object.defineProperty(person,'name',{
+			"configurable": false,
+			"writable": false,
+			"enumerable": true,
+			"value": "demaxiya"
+		})
+		delete person.name;
+		console.log( person.name );//demaxiya  不能被刪除
+		person.name = "nimendehuangdihuilaile";
+		console.log( person.name );//demaxiya  不能改变属性值
+		console.log( Object.keys(person) );//["name"] 可以被枚举
+
+		var someone = {};
+		Object.defineProperties(someone,{
+			job: {value: "frontEndEngineer",enumerable: true},
+			corp: {value: "BTBT",enumerable: true},
+			salary: {value: 50000,enumerable: true,writable: true},
+			// 如果不写enumerable/writable/configurable 那么默认为false
+			luck: {
+				get: function(){
+					return Math.random() > 0.5 ? "good" : "bad";
+				}
+			},
+			promote: {
+				set: function(level){
+					this.salary *= 1 + 0.1*level;
+				}
+			}
+		})
+		console.log( Object.getOwnPropertyDescriptor(someone,'job') );
+		someone.promote = 10;
+		console.log( someone.salary );
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,155 @@
+@charset "utf-8";
+
+body,h2,h3{
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	font-size: 14px;
+	font-family: "Avenir Next";
+	color: #555;
+	-webkit-font-smoothing: antialiased;
+	padding-top: 50px;
+}
+
+/*幻灯片区域*/
+.main-i,
+.main,
+.slider{
+	width: 100%;
+	height: 400px;
+	position: relative;
+}
+
+.main{
+	overflow: hidden;
+}
+
+.main-i img{
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	left: 0;
+}
+
+.caption{
+	position: absolute;
+	top: 30%;
+	right: 63%;
+}
+
+.caption h2{
+	font-size: 40px;
+	line-height: 50px;
+	color: #b5b5b5;
+	text-align: right;
+}
+
+.caption h3{
+	font-size: 70px;
+	line-height: 70px;
+	color: #000;
+	font-family: "Open Sans Condensed";
+}
+
+/*幻灯片样式切换*/
+.main-i{
+	opacity: 0;
+	position: absolute;
+	right: 50%;
+	top: 0;
+	transition: all 0.5s;
+	z-index: 2;
+}
+
+.main-i_right{
+	right: -50%;
+}
+
+.caption h2{
+	margin-right: 45px;
+}
+
+.caption h3{
+	margin-right: -45px;
+}
+
+.caption h2,
+.caption h3{
+	opacity: 0;
+	transition: all 1s 0.5s;
+}
+
+#main_background,
+.main_active{
+	right: 0;
+	opacity: 1;
+}
+
+.main_active h2,
+.main_active h3{
+	opacity: 1;
+	margin-right: 0;
+}
+
+#main_background{
+	z-index: 1;
+}
+
+/*控制按钮区域*/
+.ctrl{
+	width: 100%;
+	text-align: center;
+	height: 14px;
+	line-height: 14px;
+	position: absolute;
+	bottom: -14px;
+}
+
+.ctrl-i{
+	display: inline-block;
+	width: 150px;
+	height: 14px;
+	background-color: #666;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+	position: relative;
+	margin-right: 1px;
+}
+
+.ctrl-i img{
+	width: 100%;
+	position: absolute;
+	bottom: 30px;
+	left: 0;
+	opacity: 0;
+	transition: all 0.8s;
+}
+
+.ctrl-i:hover{
+	background-color: #f0f0f0;
+}
+
+.ctrl-i:hover img{
+	opacity: 1;
+	-webkit-box-reflect: below 0px -webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		from( transparent ),
+		color-stop( 70%,transparent ),
+		to( rgba(255,255,255,0.3) )
+	);
+	bottom: 14px;
+	z-index: 3;
+}
+
+/*控制按钮样式切换*/
+.ctrl_active:hover,
+.ctrl_active{
+	background-color: #000;
+}
+
+.ctrl_active:hover img{
+	opacity: 0;
+}

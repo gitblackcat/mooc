@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script>
+		
+		// obj instanceof Object
+
+		/*注意点一：左边的obj必须是对象 如果不是 直接false
+		var a = 5;
+		console.log( a instanceof Array );*/
+
+		/*注意点二：右边的Object必须是函数对象或者函数构造器 
+		如果不是报错：Uncaught TypeError
+		console.log( [] instanceof {} );
+		*/
+
+		/*注意点三：instanceof还能这么写
+		console.log( [] instanceof(Array) );
+		*/
+
+		/*注意点四：不同的window以及iframe间的对象类型检测不能使用instanceof
+				因为不同的window或者iframe下，对象完全不同
+		*/
+
+		/*
+			instanceof原理：判断obj对象的原型链上是否有右边Object的prototype属性
+		*/
+
+		// 例子1
+		// console.log( [1,2] instanceof Array ); true
+
+		// 例子2
+		// console.log( new Object() instanceof Array ); false
+
+		// 例子3
+		/*
+			function person(){};
+			function student(){};
+
+			student.prototype = new person();
+			student.prototype.constructor = student;
+
+			var bosn = new student();
+			console.log( bosn instanceof student ); true
+			console.log( bosn instanceof person ); true
+
+			var one = new person();
+			console.log( one instanceof person ); true
+			console.log( one instanceof student ); false
+		*/
+
+		/*
+			适合自定义对象，也可以用来检测原生对象，在不同iframe和window间检测时失效
+		*/
+
+	</script>
+
+</body>
+</html>

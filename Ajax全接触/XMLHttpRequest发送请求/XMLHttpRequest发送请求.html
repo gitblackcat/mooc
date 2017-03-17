@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script>
+		// XMLHttpRequest发送请求方法
+		/*
+			open(method,url,async)
+			method:发送方式get/post 不区分大小写 一般为大写
+			url:请求地址
+			async：是否异步 true/false 不填写默认为true
+		*/
+
+		/*
+			send(string)
+			string: 用get时，可不写，可写null
+					用post时，一定要写，否则没意思
+		*/
+
+		/*
+			// 创建XMLHttpRequest请求
+			var request = new XMLHttpRequest();
+			// 发送XMLHttpRequest请求
+			request.open("GET","get.php",true);
+			request.send();
+		*/
+
+		/*
+			var request = new XMLHttpRequest();
+			request.open("POST","create.php",true);
+			//这里设置请求头 告诉http要发送一个表单
+			//setRequestHeader该方法一定要写在open和send之间
+			request.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+			request.send("name=王二狗&sex=男");
+		*/
+
+
+	</script>
+
+</body>
+</html>

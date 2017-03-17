@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Preview Slideshow</title>
+	<link rel="stylesheet" href="css/slideshow.css">
+	<script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+	<div class="slider">
+		<div class="main" id="template_main">
+			<div class="main-i {{css}}" id="main_{{index}}">
+				<img class="picture" src="img/{{index}}.jpg" alt="img">
+				<div class="caption">
+					<h2>{{h2}}</h2>
+					<h3>{{h3}}</h3>
+				</div>
+			</div>
+		</div>
+
+		<div class="ctrl" id="template_ctrl">
+			<a class="ctrl-i" id="ctrl_{{index}}" href="javascript:o.switchSlider({{index}});">
+				<img src="img/{{index}}.jpg">
+			</a>
+		</div>
+	</div>
+</body>
+</html>

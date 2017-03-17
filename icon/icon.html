@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body{
+			background-color: orange;
+		}
+		.icon{
+			position: relative;
+			margin: 100px auto;
+			width: 210px;
+			height: 210px;
+		}
+		.triangle,.arc,.top-rectangle,.bottom-rectangle{
+			position: absolute;
+		}
+		.triangle{
+			border: 88px solid transparent;
+			border-left: 88px solid black;
+			left: 152px;
+			top: -40px;
+		}
+		.arc{
+			width: 120px;
+			height: 120px;
+			border-top: 40px solid black;
+			border-top-left-radius: 120px 120px;
+			/*圆角水平半径，最大取决于矩形的宽度。圆角垂直半径，最大取决于矩形的高度*/
+			left: 33px;
+			top: 24px;
+		}
+		.top-rectangle{
+			height: 192px;
+			width: 80px;
+			border: 10px solid transparent;
+			border-top: 10px solid black;
+			border-left: 10px solid black;
+		}
+		.bottom-rectangle{
+			height: 80px;
+			width: 192px;
+			border: 10px solid transparent;
+			border-bottom: 10px solid black;
+			border-right: 10px solid black;
+			bottom: 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="icon">
+		<div class="triangle"></div>
+		<div class="arc"></div>
+		<div class="top-rectangle"></div>
+		<div class="bottom-rectangle"></div>
+	</div>
+</body>
+</html>

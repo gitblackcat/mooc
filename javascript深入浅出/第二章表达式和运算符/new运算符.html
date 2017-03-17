@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script>
+		function Foo(){}
+		Foo.prototype.x = 1;
+		var obj = new Foo();
+		console.log( obj.hasOwnProperty('x') );//false
+		// hasOwnProperty是检测属性是否在自身身上的
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+@charset "utf-8";
+
+/*重置样式*/
+body,ul{
+	margin: 0;
+	padding: 0;
+}
+
+img{
+	border: 0;
+}
+
+a{
+	text-decoration: none;
+}
+
+ul{
+	list-style: none;
+}
+
+/*旋转木马的样式*/
+.poster-main{
+	position: relative;
+	width: 800px;
+	height: 270px;
+	margin: 100px auto;
+}
+
+.poster-list a,
+.poster-list img{
+	display: block;
+	/*这里设置block为了让图片上下之间无空隙，让a在样式中隐形包含图片全部*/
+}
+
+.poster-list img{
+	width: 100%;
+	height: 100%;
+}
+
+.poster-main .poster-list{
+	width: 800px;
+	height: 270px;
+}
+
+.poster-list .poster-item{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.poster-btn{
+	position: absolute;
+	top: 0;
+	width: 100px;
+	height: 270px;
+	opacity: 0.8;
+	cursor: pointer;
+	z-index: 10;
+}
+
+.poster-prev-btn{
+	left: 0;
+	background: url(btn_l.png) no-repeat center center;
+}
+
+.poster-next-btn{
+	right: 0;
+	background: url(btn_r.png) no-repeat center center;
+}

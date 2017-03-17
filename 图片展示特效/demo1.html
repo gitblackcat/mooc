@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		html,body,ul{
+			margin: 0;
+			padding: 0;
+		}
+		ul{
+			margin-top: 150px;
+			text-align: center;
+		}
+		li,img,a{
+			width: 300px;
+			height: 170px;
+		}
+		li{
+			display: inline-block;
+			margin-right: 20px;
+			list-style-type: none;
+			overflow: hidden;
+		}
+		a{
+			display: block;
+			text-decoration: none;
+			background: #000;
+			color: #fff;
+			opacity: 0.5;
+			line-height: 2em;
+			transform: translate3d(0,-35px,0);
+		}
+		li:hover a{
+			transform: translate3d(0,-170px,0);
+			transition: transform 0.3s;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>
+			<img src="img/1.jpg" alt="图片">
+			<a href="http://www.baidu.com">
+				第一张图片
+				<br>
+				这是说明文字这是说明文字这是说明文字这是说明文字
+			</a>
+		</li>
+		<li>
+			<img src="img/2.jpg" alt="图片">
+			<a href="http://www.baidu.com">
+				第二张图片
+				<br>
+				这是说明文字这是说明文字这是说明文字这是说明文字
+			</a>
+		</li>
+		<li>
+			<img src="img/3.jpg" alt="图片">
+			<a href="http://www.baidu.com">
+				第三张图片
+				<br>
+				这是说明文字这是说明文字这是说明文字这是说明文字
+			</a>
+		</li>
+	</ul>
+</body>
+</html>

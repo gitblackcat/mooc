@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script>
+		function foo(){
+			var a = b = 1;
+		}
+		foo();
+		console.log( a ); //a is not defined
+		console.log( b ); //1
+		// 也就是说紧跟在var后面的变量才是当前环境的变量
+		// 如果不是，那么会变成全局变量
+		// 所以如果要用一个var来定义，且不出错 可以如下
+		// var a = 1,b = 1;
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script>
+		var a = "string";
+		console.log( a.length );//6
+		// 按理说基本类型是不会有属性方法的，可这里依然输入了6
+		// 这是js内部机制，当你用a.length的时候，js自动生成了一个包装对象
+		// new Object(a); 所以会出现一个6
+		// 当a.length完成访问以后，这个临时对象(包装对象)就会被销毁
+		// 所以当定义a.num = 6;的时候，会销毁临时对象
+		 //所以 console.log(a.num); undefined
+	</script>
+
+</body>
+</html>

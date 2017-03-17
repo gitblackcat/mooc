@@ -1,0 +1,87 @@
+body,ul{
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+	font-family: Arial;
+}
+
+ul{
+	list-style: none;
+}
+
+.wrap{
+	width: 70%;
+	height: 200px;
+	margin: 40px auto;
+	background-color: #fff;
+}
+
+.wrap h1{
+	text-align: center;
+	font-size: 24px;
+	line-height: 200px;
+}
+
+.effect{
+	position: relative;
+	box-shadow: 0 1px 4px rgba(0,0,0,0.3),0 0 60px rgba(0,0,0,0.1) inset;
+}
+
+.effect:before,.effect:after{
+	content: "";
+	position: absolute;
+	z-index: -1;
+	top: 50%;
+	bottom: 0px;
+	left: 10px;
+	right: 10px;
+	/*在这里定方向的意思就是把一个原先不知长宽的方块，进行拉伸，使之具现化*/
+	border-radius: 100px/10px;
+	box-shadow: 0 0 20px rgba(0,0,0,0.8);
+}
+
+.box{
+	width: 980px;
+	margin: 70px auto;
+}
+
+.box li{
+	position: relative;
+	float: left;
+	width: 300px;
+	height: 220px;
+	border: 2px solid #efefef;
+	margin: 20px 10px;
+	text-align: center;
+	background-color: #fff;
+}
+
+.box li:before{
+	content: "";
+	position: absolute;
+	width: 90%;
+	left: 18px;
+	height: 80%;
+	bottom: 8px;
+	transform: skewX(-12deg) rotate(-4deg);
+	box-shadow: 2px 8px 20px rgba(0,0,0,0.6);
+	z-index: -1;
+}
+
+.box li:after{
+	content: "";
+	position: absolute;
+	width: 90%;
+	right: 18px;
+	height: 80%;
+	bottom: 8px;
+	transform: skewX(12deg) rotate(4deg);
+	box-shadow: -2px 8px 20px rgba(0,0,0,0.6);
+	z-index: -1;
+}
+
+.box li img{
+	width: 290px;
+	height: 210px;
+	padding: 5px;
+}

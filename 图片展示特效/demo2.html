@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		html,body,ul{
+			margin: 0;
+			padding: 0;
+		}
+		.clearfix:after{
+			content: "";
+			display: block;
+			clear: both;
+		}
+		ul{
+			margin: 50px auto;
+			width: 930px;
+		}
+		li{
+			list-style-type: none;
+			float: left;
+			position: relative;
+			width: 300px;
+			height: 170px;
+			margin-right: 10px;
+			margin-bottom: 10px;
+		}
+		li img{
+			width: 300px;
+			height: 170px;
+		}
+		li div{
+			position: absolute;
+			display: block;
+			top: 0;
+			z-index: -1;
+			width: 300px;
+			height: 170px;
+			background-color: #999;
+			color: #fff;
+			text-align: center;
+			line-height: 60px;
+		}
+		.right-style{
+			z-index: 1;
+			left: 310px;
+		}
+		.left-style{
+			z-index: 1;
+			right: 310px;
+		}
+	</style>
+</head>
+<body>
+	<ul class="clearfix">
+		<li>
+			<img src="img/1.jpg" alt="图片">
+			<div>这些是说明这些是说明这些是说明这些是说明这些是说明这些是说明</div>
+		</li>
+		<li>
+			<img src="img/2.jpg" alt="图片">
+			<div>这些是说明这些是说明这些是说明这些是说明这些是说明这些是说明</div>
+		</li>
+		<li>
+			<img src="img/3.jpg" alt="图片">
+			<div>这些是说明这些是说明这些是说明这些是说明这些是说明这些是说明</div>
+		</li>
+		<li>
+			<img src="img/4.jpg" alt="图片">
+			<div>这些是说明这些是说明这些是说明这些是说明这些是说明这些是说明</div>
+		</li>
+		<li>
+			<img src="img/5.jpg" alt="图片">
+			<div>这些是说明这些是说明这些是说明这些是说明这些是说明这些是说明</div>
+		</li>
+		<li>
+			<img src="img/6.jpg" alt="图片">
+			<div>这些是说明这些是说明这些是说明这些是说明这些是说明这些是说明</div>
+		</li>
+	</ul>
+
+	<script>
+		(function(){
+			var aLi = document.getElementsByTagName('li');
+			for(let i=0;i<aLi.length;i++){
+				aLi[i].onmouseover = function(){
+					var oDiv = this.getElementsByTagName('div')[0];
+					if( i % 3 === 2 ){
+						oDiv.className = 'left-style';
+					}else{
+						oDiv.className = 'right-style';
+					}
+				}
+				aLi[i].onmouseout = function(){
+					var oDiv = this.getElementsByTagName('div')[0];
+					oDiv.className = '';
+				}
+			}
+		})();
+	</script>
+</body>
+</html>

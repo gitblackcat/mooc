@@ -1,0 +1,2 @@
+http://fontawesome.io/
+在使用transform的时候，建议使用translate3d rotate3d scale3d 因为这样在移动端可以开启硬件加速功能

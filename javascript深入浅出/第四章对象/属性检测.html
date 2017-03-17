@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script>
+		
+		var cat = new Object;
+		cat.color = "orange";
+		cat.name = "King";
+
+		console.log( 'color' in cat );
+		console.log( 'name' in cat );
+		console.log( 'toString' in cat );//因为属性会沿着原型链查找 所以这里是true
+
+		console.log( cat.hasOwnProperty('color') );
+		console.log( cat.hasOwnProperty('toString') );
+		// hasOwnProperty属性是检测某属性是否是对象本身拥有的 而不是原型链上的
+
+		console.log( cat.propertyIsEnumerable('color') );
+		console.log( cat.propertyIsEnumerable('toString') );
+		// propertyIsEnumerable检测是否可枚举
+
+		// 可以自定义对象本身属性是否可以枚举
+		// 以下例子 属性存在于对象本身，但是不能被枚举
+		Object.defineProperty(cat,'price',{
+			"enumerable": false,
+			"value": 2500
+		})
+		console.log( cat.propertyIsEnumerable('price') );
+		console.log( cat.hasOwnProperty('price') );
+
+	</script>
+
+</body>
+</html>

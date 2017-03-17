@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script>
+		
+		function foo(){};
+		foo.prototype.z = 5;
+
+		var obj = new foo();
+
+		/*第一种情况
+		obj.z = 3;
+		console.log(obj.z); //3
+		*/
+
+		/*第二种情况
+		obj.z;
+		console.log(obj.z); //5
+		*/
+
+		/*第三种情况
+		obj.z = 3;
+		delete obj.z;
+		console.log(obj.z); //5
+		*/
+
+		/*第四种情况
+		delete obj.__proto__.z;
+		console.log(obj.z); //undefined
+		*/
+
+		/*第五种情况
+		obj.z = undefined;
+		console.log(obj.z); //undefined
+		*/
+
+	</script>
+
+</body>
+</html>

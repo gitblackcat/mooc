@@ -1,0 +1,169 @@
+@charset "utf-8";
+/* global */
+html{
+/*	width: 100%;
+	height: 100%;*/
+	-webkit-font-smoothing: antialiased;
+	/* 字体抗锯齿 */
+	-ms-text-size-adjust: none;
+	-webkit-text-size-adjust:none;
+	-moz-text-size-adjust:none;
+	-o-text-size-adjust:none;
+	/*iPhone 和 Android 的浏览器纵向(Portrate mode)和
+	橫向(Landscape mode)模式皆有自动调整字体大小的功能。
+	控制它的就是 CSS 中的 -webkit-text-size-adjust.
+	text-size-adjust设为none或者100%关闭字体大小自动调整功能.*/
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	background-color: #47c9af;
+/*	width: 100%;
+	height: 100%;*/
+	font-family: "Microsoft YaHei",Arial;
+	font-size: 1.5em;
+	font-weight: 700;
+	color: #74777b;
+}
+
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+	outline: none;
+}
+
+*,*:before,*:after{
+	box-sizing: border-box;
+}
+
+*:before,*:after{
+	display: block;
+	content: "";
+}
+
+*:after{
+	clear: both;
+}
+
+/* Navigation */
+.nav{
+	width: 820px;
+	height: 300px;
+	margin: 200px auto 0;
+}
+
+.nav li{
+	display: inline-block;
+	margin: 0 1em;
+	/*position: relative;*/
+}
+
+.nav li a{
+	display: inline-block;
+	position: relative;
+	padding: 0.15em 0.2em 0;
+	color: rgba(0,0,0,0.3);
+	transition: color 0.3s;
+}
+
+.nav a:hover,.nav a:focus{
+	color: rgba(255,255,255,1);
+}
+
+/* tooltip */
+.tooltip-content{
+	position: absolute;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	background-color: #fff;
+	color: #47c9af;
+	left: 50%;
+	margin-left: -40px;
+	bottom: 100%;
+	margin-bottom: 26px;
+	text-align: center;
+	padding-top: 20px;
+	opacity: 0;
+	pointer-events: none;
+	/* 鼠标事件无效化
+	在这里的表现是点击气泡没卵用 */
+}
+
+.tooltip-effect-1 .tooltip-content{
+	transform: translate3d(0,10px,0) rotate3d(1,1,1,45deg);
+	transform-origin: center bottom;
+	transition: opacity 0.3s, transform 0.3s;
+}
+
+.tooltip-effect-1 .tooltip-content i{
+	transform: scale3d(0,0,1);
+	transition: opacity 0.3s, transform 0.3s;
+}
+
+.tooltip-effect-2 .tooltip-content{
+	transform: translate3d(0,10px,0);
+	transition: opacity 0.3s, transform 0.3s;
+}
+
+.tooltip-effect-2 .tooltip-content i{
+	transform: translate3d(0,16px,0);
+	transition: opacity 0.3s, transform 0.3s;
+}
+
+.tooltip-effect-3 .tooltip-content{
+	transform: translate3d(0,10px,0) rotate3d(0,1,0,90deg);
+	/*transform-origin: center bottom;*/
+	transition: opacity 0.3s, transform 0.3s;
+}
+
+.tooltip-effect-3 .tooltip-content i{
+	transform: scale3d(0,0,1);
+	transition: opacity 0.3s, transform 0.3s;
+}
+
+.tooltip-effect-4 .tooltip-content{
+	transform: translate3d(0,-20px,0);
+	transition: opacity 0.3s, transform 0.3s;
+}
+
+.tooltip-effect-4 .tooltip-content i{
+	transform: translate3d(0,20px,0);
+	transition: opacity 0.3s, transform 0.3s;
+}
+
+.tooltip-effect-5 .tooltip-content{
+	transform: translate3d(0,20px,0) scale3d(0,0,1);
+	transform-origin: center bottom;
+	transition: opacity 0.3s, transform 0.3s;
+}
+
+.tooltip-effect-5 .tooltip-content i{
+	transform: translate3d(0,20px,0);
+	transition: opacity 0.3s, transform 0.3s;
+}
+
+.tooltip:hover .tooltip-content,
+.tooltip:hover .tooltip-content i{
+	pointer-events: auto;
+	transform: translate3d(0,0,0) rotate3d(1,1,1,0) scale3d(1,1,1);
+	opacity: 1;
+}
+
+/* Arrow */
+.tooltip-content:after{
+	position: absolute;
+	width: 30px;
+	height: 20px;
+	background: url(../img/tooltip1.svg) no-repeat center center;
+	background-size: 100%;
+	top: 100%;
+	left: 50%;
+	margin: -7px 0 0 -15px; 
+}

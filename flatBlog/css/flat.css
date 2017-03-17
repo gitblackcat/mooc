@@ -1,0 +1,266 @@
+.clearfix:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+button{
+	border: none;
+	background-color: #333;
+	color: #eee;
+}
+
+.hr{
+	width: 100%;
+	margin: 20px auto;
+	height: 2px;
+}
+
+.sub-heading{
+	line-height: 30px;
+	margin: 30px 0;
+	font-size: 18px;
+}
+
+.wrapper{
+	max-width: 1080px;
+	margin: 0 auto;
+}
+
+p{
+	font-size: 18px;
+	letter-spacing: 1px;
+}
+
+ul{
+	margin: 0;
+	list-style: none;
+}
+
+h1,h2,h3{
+	margin: 0;
+}
+
+h2{
+	font-size: 30px;
+	margin: 0;
+}
+
+h3{
+	font-size: 24px;
+}
+
+a{
+	text-decoration: none;
+}
+
+header{
+	background-color: rgba(0,0,0,0.4);
+}
+
+nav{
+	height: 50px;
+}
+
+nav .logo{
+	float: left;
+	letter-spacing: 1px;
+	padding: 0 10px;
+}
+
+.logo a{
+	font-size: 20px;
+	font-weight: 700;
+	color: #fff;
+}
+
+nav ul{
+	float: right;
+}
+
+nav ul li,nav .logo{
+	display: inline-block;
+	line-height: 50px;
+	margin-right: 20px;
+}
+
+nav ul li a{
+	display: inline-block;
+	height: inherit;
+	color: #fff;
+}
+
+.banner{
+	height: 700px;
+	color: #fff;
+}
+
+.banner .inner{
+	max-width: 300px;
+	text-align: center;
+	margin: 0 auto;
+	position: relative;
+	top: 160px;
+}
+
+.banner .inner h1{
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	padding: 30px 0;
+}
+
+.banner button{
+	padding: 14px 40px;
+	border-radius: 7px;
+	background-color: rgba(81,57,176,0.4);
+}
+
+.banner .inner .more{
+	margin-top: 200px;
+}
+
+.green-section{
+	text-align: center;
+	background-color: #089db0;
+	color: #fff;
+	padding: 100px 0;
+}
+
+.green-section .hr{
+	background-color: #078494;
+	width: 60%;
+}
+
+.icon-group{
+	margin-top: 60px;
+}
+
+.icon-group .icon{
+	display: inline-block;
+	width: 80px;
+	height: 80px;
+	border: 1px solid #0d6f7c;
+	margin: 20px;
+	transform: rotate(45deg);
+}
+
+.gray-section{
+	background-color: #252f34;
+	color: #fff;
+}
+
+.article-preview:nth-child(odd){
+	background-color: rgba(255,255,255,0.05);
+}
+
+.article-preview > div{
+	float: left;
+	font-size: 0;
+	/*这里font-size为0，是为了防止article-preview
+	上下块产生缝隙*/
+}
+
+.img-section{
+	width: 45%;
+}
+
+.img-section img{
+	width: 100%;
+	/*为什么这样写，因为图片默认是原样呈现*/
+}
+
+.text-section{
+	width: 55%;
+	position: relative;
+	top: 115px;
+}
+
+.text-section > *{
+	max-width: 80%;
+	padding-left: 50px;
+	text-align: justify;
+}
+
+.text-section h2{
+	margin-bottom: 20px;
+}
+
+.text-section .sub-heading{
+	font-size: 20px;
+	margin-top: 0px;
+}
+
+.purple-section{
+	padding: 80px;
+	background-color: #3f3965;
+	color: #fff;
+}
+
+.purple-section .heading-wrapper{
+	text-align: center;
+}
+
+.purple-section .hr{
+	background-color: #373259;
+	width: 60%;
+}
+
+.card{
+	float: left;
+	width: 50%;
+	min-height: 300px;
+	padding: 50px;
+	box-sizing: border-box;
+}
+
+.card:first-child{
+	background-color: rgba(0,0,0,0.04);
+}
+
+.card:nth-child(2){
+	background-color: rgba(0,0,0,0.08);
+}
+
+.card:nth-child(3){
+	background-color: rgba(0,0,0,0.12);
+}
+
+.card:nth-child(4){
+	background-color: rgba(0,0,0,0.16);
+}
+
+.card:nth-child(5){
+	background-color: rgba(0,0,0,0.20);
+}
+
+.card:nth-child(6){
+	background-color: rgba(0,0,0,0.24);
+}
+
+footer{
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+}
+
+footer ul{
+	margin: 0 auto;
+	max-width: 1080px;
+	padding: 50px;
+}
+
+.share-group li{
+	display: inline-block;
+	padding: 10px;
+}
+
+.copy{
+	padding-bottom: 20px;
+}
+
+.main-wrap{
+	background: #444 url(../img/banner.jpg) no-repeat center center;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center center; 
+}

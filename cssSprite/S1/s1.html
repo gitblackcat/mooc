@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		h3,ul{
+			margin: 0;
+			padding: 0;
+		}
+		div{
+			margin: 100px auto;
+			width: 240px;
+			padding: 30px;
+			background-color: #777;
+			border: 1px solid black;
+		}
+		li{
+			list-style-type: none;
+			border-bottom: 1px solid #fff;
+			padding: 10px 0;
+			color: #fff;
+		}
+		li span{
+			width: 30px;
+			height: 24px;
+			float: left;
+			background-image: url(sidebar.png);
+			margin-left: 30px;
+		}
+		li h3{
+			padding-left: 84px;
+		}
+		/*ele:nth-child(n)选择的是当前元素的父元素下的第n个子元素,
+		如果该子元素是ele，那么选择成功，如果不是，那么选择失败*/
+		/*ele:nth-of-type(n)选择的是当前元素的父元素下的第n个ele元素*/
+		li:nth-child(1) span{
+			background-position: 0 0;
+		}
+		li:nth-child(2) span{
+			background-position: 0 -24px;
+		}
+		li:nth-child(3) span{
+			background-position: 0 -48px;
+		}
+		li:nth-child(4) span{
+			background-position: 0 -72px;
+		}
+		li:nth-child(5) span{
+			background-position: 0 -96px;
+		}
+		li:nth-child(6) span{
+			background-position: 0 -120px;
+		}
+		li:nth-child(7) span{
+			background-position: 0 -144px;
+		}
+		li:nth-child(8) span{
+			background-position: 0 -168px;
+		}
+		li:nth-child(9) span{
+			background-position: -40px 0;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<ul>
+			<li>
+				<span></span>
+				<h3>服装内衣</h3>
+			</li>
+			<li>
+				<span></span>
+				<h3>鞋包配饰</h3>
+			</li>
+			<li>
+				<span></span>
+				<h3>运动户外</h3>
+			</li>
+			<li>
+				<span></span>
+				<h3>珠宝手表</h3>
+			</li>
+			<li>
+				<span></span>
+				<h3>手机数码</h3>
+			</li>
+			<li>
+				<span></span>
+				<h3>家电办公</h3>
+			</li>
+			<li>
+				<span></span>
+				<h3>护肤彩妆</h3>
+			</li>
+			<li>
+				<span></span>
+				<h3>母婴用品</h3>
+			</li>
+			<li>
+				<span></span>
+				<h3>其他分类</h3>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

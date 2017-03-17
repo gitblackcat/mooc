@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script>
+		// 三个等号
+		// 第一步 看类型是不是相同 如果不是 直接false 如果是 进入第二步
+		// 注意：
+		// console.log( null === null ) true
+		// console.log( undefined === undefined ) true
+		// console.log( NaN === NaN ) false  这里值得一提NaN跟任何东西都等不起来
+		// console.log( new Object === new Object ) false 对象比较的是地址的引用
+
+		// 两个等号
+		// 第一步 类型相同 直接比较 如果类型不同 进入第二步
+		// 第二步 进行类型转换
+		// console.log( null == undefined ) true
+		// console.log( number == string ) 这里会把string转换成number类型再进行比较
+		// console.log( boolean == ? ) 这里会把?的内容转换成number类型进行比较 
+		// 					如果转换出来的number类型是1 则为true 其他皆为false
+		// console.log( new Object == new Object ) false 对象比较的是地址的引用
+		// console.log( object == number | string )
+		// 这里尝试对象转为基本类型再比较 new String('hi') == 'hi' //true
+	</script>
+
+</body>
+</html>

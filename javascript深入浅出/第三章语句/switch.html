@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script>
+		
+		var val = 2;
+		/*
+			switch(val){
+				case 1:
+					console.log(1);
+					break;
+				case 2:
+					console.log(2);
+					break;
+				default:
+					console.log(0);
+					break;
+			}
+			如果没有break 那么val查到case2以后 还会继续找下去
+		*/
+
+		switch(val){
+			case 1:
+			case 2:
+			case 3:
+				console.log( 123 );
+				break;
+			case 4:
+			case 5:
+				console.log( 45 );
+				break;
+			default:
+				console.log( 0 );
+		}
+
+	</script>
+
+</body>
+</html>

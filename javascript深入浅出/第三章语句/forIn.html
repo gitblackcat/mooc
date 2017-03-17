@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script>
+		// for in语句注意点
+		// 1.用for in语句遍历的时候 顺序未必是从头到尾的，这取决是什么浏览器
+		// 如果对象上的属性的enumerable为false，那么不会出现
+		//如果对象的原型链上有属性，且属性的enumerable为true，那么会被遍历到
+
+		// 关于enumerable即可枚举性  https://segmentfault.com/a/1190000002953364
+
+		/*var o = {a: 1,b: 2};
+		o.c = 3;
+		Object.defineProperty(o,'d',{
+			value: 4,
+			enumberable: false
+		})
+
+		console.log( o.d );
+
+		for(var key in o){
+			console.log( o[key] );
+		}
+
+		console.log( Object.keys(o) );
+
+		console.log( JSON.stringify(o) );
+
+		虽然可以直接取值，但for in、keys、JSON.stringify都不能访问到
+
+		至于for...in循环和Object.keys方法的区别，在于前者包括对象继承自原型对象的属性，而后者只包括对象本身的属性。如果需要获取对象自身的所有属性，不管enumerable的值，可以使用Object.getOwnPropertyNames方法
+		var o = {a: 1,b: 2};
+		o.c = 3;
+		Object.defineProperty(o,'d',{
+			value: 4,
+			enumberable: false
+		})
+		console.log( Object.getOwnPropertyNames(o) );
+		*/
+
+
+
+
+	</script>
+
+</body>
+</html>
